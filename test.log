@@ -1,0 +1,48 @@
+
+> aws-lambda-packager@1.0.9 test /home/sharad/dev/git-workspaces/dem/lambda-packager
+> mocha tests/index.test.js
+
+
+
+  lambda-packager-tests
+Scanning for dependencies ...
+Scanned paths :
+{
+  "deps": {
+    "_data": [
+      "tests/sample-lambda-no-config/node_modules/winston",
+      "tests/sample-lambda-no-config/node_modules/async",
+      "tests/sample-lambda-no-config/node_modules/colors",
+      "tests/sample-lambda-no-config/node_modules/cycle",
+      "tests/sample-lambda-no-config/node_modules/eyes",
+      "tests/sample-lambda-no-config/node_modules/isstream",
+      "tests/sample-lambda-no-config/node_modules/stack-trace"
+    ]
+  },
+  "distName": "sample-node-project-no-config-1.0.0.zip"
+}
+Scan completed, total dependencies :7
+Total dependencies scanned :[object Object]
+mainfile :tests/sample-lambda-no-config/index.js
+Adding node modules to zip ...
+Searching for modules dir ...
+testing modules dir :tests/sample-lambda-no-config/modules
+testing modules dir :tests/sample-lambda-no-config/src
+testing modules dir :tests/sample-lambda-no-config/lib
+About to create zip ...
+    1) test happy path
+
+
+  0 passing (14ms)
+  1 failing
+
+  1) lambda-packager-tests test happy path:
+     Error: ENOENT: no such file or directory, stat 'tests/sample-lambda-no-config/lib'
+      at Error (native)
+      at Object.fs.statSync (fs.js:844:18)
+      at addNodeModules (lib/DependencyScanner.js:249:31)
+      at DependencyScanner.scanv3 (lib/DependencyScanner.js:333:5)
+      at Context.<anonymous> (tests/index.test.js:17:12)
+
+
+

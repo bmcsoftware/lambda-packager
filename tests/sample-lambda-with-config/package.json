@@ -1,0 +1,17 @@
+{
+  "name": "sample-lambda-with-config",
+  "version": "1.0.0",
+  "description": "sample project for testing purpose only",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shasinha",
+  "license": "ISC",
+  "dependencies": {
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2"
+  }
+}
